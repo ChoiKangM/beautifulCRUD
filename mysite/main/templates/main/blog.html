@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Blog List</title>
+    </head>
+    <body>
+        <h1>게시판 페이지입니다</h1>
+        <!-- 게시판(postlist)의 게시글(list)을 하나씩 보여줍니다 -->
+        <!-- {와 %로 이루어진 구문 내부엔 파이썬이 사용됩니다 -->
+        <table>
+        {% for list in postlist %}
+            <!-- 게시글 클릭시 세부페이지로 넘어갑니다-->
+            <tr onclick="location.href='https://haedal11233.run.goorm.io/blog/{{ list.pk }}/'">
+                <td>{{list.postname}}</td>
+                <td>{{list.contents}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
