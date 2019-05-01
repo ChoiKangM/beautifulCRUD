@@ -10,9 +10,69 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <h1>메인 페이지입니다</h1>
-        <!-- 정적 이미지 불러오기 -->
-        {% load static %}
-        <img src="{% static 'firstImg.png' %}">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">내 홈페이지</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">메인</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog">게시판</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  드롭다운
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">궁금궁금</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">맘대루 넣읍시다</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">뭘 넣을까</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색하기</button>
+            </form>
+          </div>
+        </nav>
+        <!-- container 사용하기 -->
+        <div class="container">
+            <!--
+            <div class="row">
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+                <div class="col-sm-3 bg-primary p-3">col-3</div>
+            </div>
+            -->
+            
+            
+            
+            <h1>메인 페이지입니다</h1>
+            <!-- 정적 이미지 불러오기 -->
+            {% load static %}
+            <!-- 이미지가 디스플레이의 가로보다 긴 경우 max-width 100%로 수정 -->
+            <img class ="img-fluid"src="{% static 'firstImg.png' %}">
+        </div>
     </body>
 </html>
