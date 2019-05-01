@@ -51,5 +51,36 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 (myvenv) root@goorm:/workspace/djangoBootcamp/mysite# python manage.py runserver 0:80 
 ```
 
+#### `Bootstrap` `CDN`
+`HTML`에서 `<head>`태그엔 중요한 정보지만   
+눈에 보이지 않는 정보들이 포함됩니다.
 
+[`Bootstrap` 홈페이지](https://getbootstrap.com/)에 가면  
+`CDN`을 확인 할 수 있습니다  
+![img/bootstrapCDN.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapCDN.png)
+
+`Bootstrap` `CDN`을 복사해 `<head>` 태그 안에 아래의 코드를 삽입합니다
+
+아래와 같이 붙이면 됩니다  
+`mysite/main/templates/main/index.html`
+```html
+<html>
+    <head>
+        <title>Django Tutorial</title>
+        <!-- Bootstrap CDN -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>메인 페이지입니다</h1>
+        <!-- 정적 이미지 불러오기 -->
+        {% load static %}
+        <img src="{% static 'firstImg.png' %}">
+    </body>
+</html>
+```
 
