@@ -2,7 +2,7 @@
 > 부트스트랩이란 프론트엔트 프레임워크를 활용해 쉽게 웹사이트를 꾸며봅니다
 
 ## [부트스트랩](https://getbootstrap.com/)이란?
-![bootstrap](http://www.w3.org/2000/svg)
+![bootstrap](https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.pngs)
 세계에서 가장 인기 있는 프론트엔드 라이브러리로 자신의 아이디어를 빠르게 구현하는데 도움을 주는 오픈소스 툴킷입니다.
 
 * 모바일, PC, 태블릿 등 다른 크기의 디스플레이에 대응 가능한 반응형 웹
@@ -34,3 +34,22 @@ root@goorm:/workspace/djangoBootcamp# git clone https://github.com/kei01138/boot
 ```console
 root@goorm:/workspace/djangoBootcamp# mv bootCamp_Week3/mysite/ /workspace/djangoBootcamp/mysite
 ```
+
+
+### `웹서버 실행` 복습  
+
+**프로젝트를 실행할때마다 반복해서 사용하는 명령어입니다**  
+파이썬 가상환경 설정 
+```console
+root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
+```
+이제 `django` 웹서버를 실행합시다   
+구름 IDE를 사용하는 경우  
+상단 메뉴바의 `프로젝트 -> 실행 URL과 포트`에서   
+80번 포트를 설정 후 접속합니다
+```console
+(myvenv) root@goorm:/workspace/djangoBootcamp/mysite# python manage.py runserver 0:80 
+```
+
+
+
