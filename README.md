@@ -83,7 +83,9 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-### [Container](https://getbootstrap.com/docs/4.3/layout/overview/)
+### [Container](https://getbootstrap.com/docs/4.3/layout/overview/)  
+![img/bootstrapContainer.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapContainer.png)
+
 기술의 발달로 PC의 경우는 가로가 넓어지고, 모바일의 경우 세로가 넓어졌습니다.  
 웹페이지는 기기들의 다양한 디스플레이에 탄력적으로 대응해야 했습니다.  
 [반응형 웹](https://developers.google.com/web/fundamentals/design-and-ux/responsive/?hl=ko)이란 기술로 여러 기기들에 대응하게 됩니다.  
@@ -117,7 +119,6 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 </html>
 ```
 
-![img/bootstrapContainer.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapContainer.png)
 
 ### [Grid 시스템(Col, Row)](https://getbootstrap.com/docs/4.3/layout/grid/)
 격자(`Grid`) 형식으로 디스플레이를 나누어 콘텐츠들을 배치하는 방식으로  
@@ -131,6 +132,11 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 
 디스플레이 마다 대응하기엔 아직 힘드니 PC에서 진행해봅니다.
 `mysite/main/templates/main/index.html`
+`PC 화면`  
+![img/col_3_PC.png](img/col_3_PC.png)   
+`모바일 화면`  
+![img/col_3_sm.png](img/col_3_sm.png)
+
 ```html
 <html>
     <head>
@@ -162,7 +168,8 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
             ...
         </div>
     </body>
-</html>```
+</html>
+```
 
 `col-sm-3`을 `col-3`으로 진행해도 비슷하게 작동합니다.  
 `col-sm-3`은 모바일 화면에서 1줄(12칸)을 차지합니다.(540px 미만)  
@@ -170,17 +177,13 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 `col-3`은 모든 화면에서 3칸으로 적용됩니다.
 
 ##### 반응형 웹의 강력함이 느껴지나요?
-`PC 화면`  
-![img/col_3_PC.png](img/col_3_PC.png)   
-`모바일 화면`  
-![img/col_3_sm.png](img/col_3_sm.png)
 
 ### [Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)
+![img/bootstrapNavbar.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapNavbar.png)  
 많은 홈페이지에서 사용하는 상단 메뉴바를 만들어봅니다  
 [`Bootstrap` Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)에 들어가 적당한 Navbar을 찾아 코드를 가져와 `<body>`태그 안에 붙입니다.  
 
 저는 아래의 코드를 가져왔습니다.  
-![img/bootstrapNavbar.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapNavbar.png)
 
 `mysite/main/templates/main/index.html` 구조
 ```html
@@ -208,8 +211,8 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-수정 후 `mysite/main/templates/main/index.html`
-
+수정 후 `mysite/main/templates/main/index.html`  
+![img/navbar_index.png](img/navbar_index.png)  
 ```html
 <html>
     <head>
@@ -268,7 +271,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-![img/navbar_index.png](img/navbar_index.png)
+
 
 게시판(`blog.html`)과 세부게시글 페이지(`posting.html`)에도 `CDN`, `navbar`,`container`를 추가합니다  
 #### 구조도 
@@ -295,74 +298,9 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-수정 후 `mysite/main/templates/main/blog.html`
-```html
-<html>
-    <head>
-        <title>Blog List</title>
-        <!-- Bootstrap CDN -->
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">내 홈페이지</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">메인</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/blog">게시판</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  드롭다운
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">궁금궁금</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">맘대루 넣읍시다</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">뭘 넣을까</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색하기</button>
-            </form>
-          </div>
-        </nav>
-        <div class="container">
-            <h1>게시판 페이지입니다</h1>
-        <!-- 게시판(postlist)의 게시글(list)을 하나씩 보여줍니다 -->
-        <!-- {와 %로 이루어진 구문 내부엔 파이썬이 사용됩니다 -->
-        <table>
-        {% for list in postlist %}
-            <!-- 게시글 클릭시 세부페이지로 넘어갑니다-->
-            <tr onclick="location.href='https://haedal11233.run.goorm.io/blog/{{ list.pk }}/'">
-                <td>{{list.postname}}</td>
-                <td>{{list.contents}}</td>
-            </tr>
-        {% endfor %}
-        </table>
-        </div>
-    </body>
-</html>
-```
+수정 후 `mysite/main/templates/main/blog.html`  
 ![img/navbar_blog.png](img/navbar_blog.png)
   
-수정 후 `mysite/main/templates/main/posting.html`  
 ```html
 <html>
     <head>
@@ -427,10 +365,78 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-![img/navbar_posting.png](img/navbar_posting.png)
+
+수정 후 `mysite/main/templates/main/posting.html`    
+![img/navbar_posting.png](img/navbar_posting.png)  
+```html
+<html>
+    <head>
+        <title>Blog List</title>
+        <!-- Bootstrap CDN -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">내 홈페이지</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">메인</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog">게시판</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  드롭다운
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">궁금궁금</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">맘대루 넣읍시다</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">뭘 넣을까</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색하기</button>
+            </form>
+          </div>
+        </nav>
+        <div class="container">
+            <h1>게시판 페이지입니다</h1>
+        <!-- 게시판(postlist)의 게시글(list)을 하나씩 보여줍니다 -->
+        <!-- {와 %로 이루어진 구문 내부엔 파이썬이 사용됩니다 -->
+        <table>
+        {% for list in postlist %}
+            <!-- 게시글 클릭시 세부페이지로 넘어갑니다-->
+            <tr onclick="location.href='https://haedal11233.run.goorm.io/blog/{{ list.pk }}/'">
+                <td>{{list.postname}}</td>
+                <td>{{list.contents}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+    </body>
+</html>
+```
 
 
-### [Card](https://getbootstrap.com/docs/4.3/components/card/)
+
+### [Card](https://getbootstrap.com/docs/4.3/components/card/)  
+![img/bootstrapCard.png](img/bootstrapCard.png)  
 휴대폰, '패블릿', 태블릿, 데스크톱, 게임 콘솔, TV, 웨어러블 등 다양한 화면 크기가 존재합니다.  
 화면 크기는 항상 변하기 마련이므로, 현재나 미래에 모든 화면 크기에 맞게 사이트를 만드는 것이 중요합니다.  
 이에 적응한 대표적인 방식이 `Card`입니다.
@@ -507,7 +513,6 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-![img/bootstrapCard.png](img/bootstrapCard.png)
 
 이제 게시물 갯수만큼 카드가 생겼습니다  
 확인해봅니다
