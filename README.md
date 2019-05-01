@@ -36,7 +36,7 @@ root@goorm:/workspace/djangoBootcamp# mv bootCamp_Week3/mysite/ /workspace/djang
 ```
 
 
-### `웹서버 실행` 복습  
+## `웹서버 실행` 복습  
 
 **프로젝트를 실행할때마다 반복해서 사용하는 명령어입니다**  
 파이썬 가상환경 설정 
@@ -51,7 +51,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 (myvenv) root@goorm:/workspace/djangoBootcamp/mysite# python manage.py runserver 0:80 
 ```
 
-#### `Bootstrap` `CDN`
+## `Bootstrap` `CDN`
 `HTML`에서 `<head>`태그엔 중요한 정보지만   
 눈에 보이지 않는 정보들이 포함됩니다.
 
@@ -83,7 +83,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
     </body>
 </html>
 ```
-### [Container](https://getbootstrap.com/docs/4.3/layout/overview/)  
+## [Container](https://getbootstrap.com/docs/4.3/layout/overview/)  
 ![img/bootstrapContainer.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapContainer.png)
 
 기술의 발달로 PC의 경우는 가로가 넓어지고, 모바일의 경우 세로가 넓어졌습니다.  
@@ -130,8 +130,8 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 
 화면의 가로 축을 12칸으로 나누어 기기마다 대응합니다.
 
-디스플레이 마다 대응하기엔 아직 힘드니 PC에서 진행해봅니다.
-`mysite/main/templates/main/index.html`
+디스플레이 마다 대응하기엔 아직 힘드니 PC에서 진행해봅니다.  
+`mysite/main/templates/main/index.html`  
 `PC 화면`  
 ![img/col_3_PC.png](img/col_3_PC.png)   
 `모바일 화면`  
@@ -178,7 +178,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 
 ##### 반응형 웹의 강력함이 느껴지나요?
 
-### [Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)
+## [Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)
 ![img/bootstrapNavbar.png](https://github.com/haedal-with-knu/djangoBootcamp/blob/master/img/bootstrapNavbar.png)  
 많은 홈페이지에서 사용하는 상단 메뉴바를 만들어봅니다  
 [`Bootstrap` Navbar](https://getbootstrap.com/docs/4.3/components/navbar/)에 들어가 적당한 Navbar을 찾아 코드를 가져와 `<body>`태그 안에 붙입니다.  
@@ -435,7 +435,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 
 
 
-### [Card](https://getbootstrap.com/docs/4.3/components/card/)  
+## [Card](https://getbootstrap.com/docs/4.3/components/card/)  
 ![img/bootstrapCard.png](img/bootstrapCard.png)  
 휴대폰, '패블릿', 태블릿, 데스크톱, 게임 콘솔, TV, 웨어러블 등 다양한 화면 크기가 존재합니다.  
 화면 크기는 항상 변하기 마련이므로, 현재나 미래에 모든 화면 크기에 맞게 사이트를 만드는 것이 중요합니다.  
