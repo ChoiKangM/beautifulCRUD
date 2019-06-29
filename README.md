@@ -2,7 +2,7 @@
 > 부트스트랩이란 프론트엔트 프레임워크를 활용해 쉽게 웹사이트를 꾸며봅니다
 
 ## [부트스트랩](https://getbootstrap.com/)이란?
-![bootstrap](https://v4-alpha.getbootstrap.com/assets/brand/bootstrap-social-logo.pngs)
+![bootstrap](img/bootstrap.png)
 세계에서 가장 인기 있는 프론트엔드 라이브러리로 자신의 아이디어를 빠르게 구현하는데 도움을 주는 오픈소스 툴킷입니다.
 
 * 모바일, PC, 태블릿 등 다른 크기의 디스플레이에 대응 가능한 반응형 웹
@@ -436,7 +436,7 @@ root@goorm:/workspace/djangoBootcamp/mysite# source myvenv/bin/activate
 
 
 ## [Card](https://getbootstrap.com/docs/4.3/components/card/)  
-![img/bootstrapCard.png](img/bootstrapCard.png)  
+![img/bootstrapCard_ex.png](img/bootstrapCard_ex.png)  
 휴대폰, '패블릿', 태블릿, 데스크톱, 게임 콘솔, TV, 웨어러블 등 다양한 화면 크기가 존재합니다.  
 화면 크기는 항상 변하기 마련이므로, 현재나 미래에 모든 화면 크기에 맞게 사이트를 만드는 것이 중요합니다.  
 이에 적응한 대표적인 방식이 `Card`입니다.
